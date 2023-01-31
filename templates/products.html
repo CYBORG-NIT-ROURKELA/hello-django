@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <h1>Products Page</h1>
+    <h3>Hello {{ name }}</h3>
+    <br><br>
+
+    <ol>
+        {% for fruit in fruits %}
+            <li>{{ fruit }}</li>
+        {% endfor %}
+    </ol>
+    <br><br><br><br>
+
+    <h2>Products in database</h2>
+    {% for pro in products %}
+        <h3>{{ pro.name }}</h3>
+        <p>{{ pro.description }}</p>
+        <small>{{ pro.price }}</small>
+        <br>
+    {% endfor %}
+</body>
+</html>
